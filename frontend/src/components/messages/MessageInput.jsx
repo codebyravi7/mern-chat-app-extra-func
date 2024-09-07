@@ -67,7 +67,6 @@ const MessageInput = () => {
     formData.append("file", image);
     formData.append("upload_preset", "my_preset"); // Use the preset you created
     formData.append("cloud_name", `${import.meta.env.VITE_CLOUD_NAME}`); // Replace with your Cloudinary cloud name
-    console.log(`${import.meta.env.VITE_CLOUD_NAME}`);
     try {
       const response = await axios.post(
         `https://api.cloudinary.com/v1_1/${
