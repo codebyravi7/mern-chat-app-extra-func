@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("/2.mp4");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-} */
 body, html, #root {
   margin: 0;
   padding: 0;

@@ -15,14 +15,14 @@ const MessageInput = () => {
       setMessage("");
     } else {
       await handleImageUpload();
-      console.log("message: ",message)
+      console.log("message: ", message);
       await sendMessage(imageUrl, true);
       setImage(null);
-      imageUrl =""
+      imageUrl = "";
       setMessage("");
     }
   };
-  const [mic,setMic] =useState(false)
+  const [mic, setMic] = useState(false);
   const handleMic = (e) => {
     console.log("mic clicked");
     setMic(true);
@@ -53,12 +53,12 @@ const MessageInput = () => {
     fileInputRef.current.click();
   };
   const handleImageChange = (e) => {
-     const file = e.target.files[0];
-     setImage(file);
+    const file = e.target.files[0];
+    setImage(file);
     //preview of image selected
     console.log(file);
     console.log(image);
-    setMessage(file.name)
+    setMessage(file.name);
     console.log("handleImageChange");
   };
   const handleImageUpload = async () => {
@@ -78,7 +78,6 @@ const MessageInput = () => {
       console.log(data);
       imageUrl = data.secure_url;
       return;
-      
     } catch (error) {
       console.error("Error uploading image:", error);
     }
